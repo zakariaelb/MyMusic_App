@@ -1,26 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="16dp">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
 
     <ImageView
         android:id="@+id/imageV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
     <TextView
         android:id="@+id/textV1"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:textSize="24sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        app:layout_constraintStart_toEndOf="@+id/imageV"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="TextView" />
 
     <TextView
         android:id="@+id/textV2"
+        android:paddingLeft="10dp"
+        android:textSize="14sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        app:layout_constraintStart_toEndOf="@+id/imageV"
+        app:layout_constraintTop_toBottomOf="@+id/textV1"
+        tools:text="TextView" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
