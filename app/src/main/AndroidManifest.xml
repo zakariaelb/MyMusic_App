@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="digiplus.ma.mymusicapp">
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="digiplus.ma.mymusicapp">
 
     <application
         android:allowBackup="true"
@@ -9,10 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Playing"></activity>
-        <activity android:name=".Album_Activity" />
-        <activity android:name=".Artistes" />
+        <activity android:name=".Playing"
+            android:parentActivityName=".MainActivity"
+            android:label="Playing">
+
+        </activity>
+        <activity android:name=".Album_Activity"
+            android:parentActivityName=".MainActivity"
+            android:label="Albums"/>
+        <activity android:name=".Artistes"
+            android:parentActivityName=".MainActivity"
+            android:label="Artistes"/>
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,5 +29,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
