@@ -1,5 +1,6 @@
 package digiplus.ma.mymusicapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,6 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -51,6 +55,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void PlayBroser() {
         startActivity(new Intent(this, Playing.class));
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.app_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.Item1:
+                startActivity(new Intent(this, Artistes.class));
+                return true;
+            case R.id.Item2:
+                startActivity(new Intent(this, Album_Activity.class));
+                return true;
+            case R.id.Item3:
+                startActivity(new Intent(this, Playing.class));
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+    }
+
     /**
         public void Play() {
             Intent intent = new Intent(MainActivity.this, Play.class);
