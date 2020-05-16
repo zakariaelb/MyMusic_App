@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.Item1:
-                startActivity(new Intent(this, Artistes.class));
+                startActivity(new Intent(this, MainActivity.class));
                 return true;
             case R.id.Item2:
                 startActivity(new Intent(this, Album_Activity.class));
@@ -75,7 +75,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.Item3:
                 startActivity(new Intent(this, Playing.class));
                 return true;
-
+            case R.id.Item4:
+                startActivity(new Intent(this, Artistes.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

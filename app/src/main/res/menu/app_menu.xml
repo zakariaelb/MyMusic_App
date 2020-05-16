@@ -9,6 +9,9 @@
     <item android:title="Albums"
         android:id="@+id/Item2"
         app:showAsAction="never" />
+    <item android:title="Artistes"
+        android:id="@+id/Item4"
+        app:showAsAction="never" />
     <item android:title="Playing now"
         android:id="@+id/Item3"
         app:showAsAction="never" />

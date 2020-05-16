@@ -78,7 +78,9 @@ public class Album_Activity extends AppCompatActivity {
             case R.id.Item3:
                 startActivity(new Intent(this, Playing.class));
                 return true;
-
+            case R.id.Item4:
+                startActivity(new Intent(this, Artistes.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
