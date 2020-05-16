@@ -6,10 +6,10 @@
         android:id="@+id/Item1"
         android:icon="@drawable/ic_menu"
         app:showAsAction="ifRoom" />
-    <item android:title="Item2"
+    <item android:title="Albums"
         android:id="@+id/Item2"
         app:showAsAction="never" />
-    <item android:title="Item3"
+    <item android:title="Playing now"
         android:id="@+id/Item3"
         app:showAsAction="never" />
 </menu>
