@@ -84,14 +84,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    /**
-        public void Play() {
-            Intent intent = new Intent(MainActivity.this, Play.class);
-            intent.putExtra("album", "Weekend");
-            intent.putExtra("artist", "The Weekend");
-            intent.putExtra("title", "Hi");
-            intent.putExtra("img_res", R.drawable.theweekend);
-            startActivity(intent);
-        }
-        */
 }
